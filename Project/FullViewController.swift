@@ -174,11 +174,11 @@ class FullViewController: UIViewController {
             weatherTextLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalSpacerConstant),
             weatherTextLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalSpacerConstant),
             weatherTextLabel.bottomAnchor.constraint(equalTo: allStackView.topAnchor, constant: horizontalSpacerConstant),
-
+            
             allStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalSpacerConstant),
             allStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalSpacerConstant),
             allStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -horizontalSpacerConstant),
-        ])
+            ])
         
         if let theDate = myDate {
             setText(label: dateTextLabel, text: theDate)
@@ -198,9 +198,9 @@ class FullViewController: UIViewController {
         }
         
         if let weatherData = row {
-            setText(label: minTempTempTextLabel, text: "Min Temp: \n" + String(format: "%.2f", weatherData.main.temp_min) + "\u{00B0}")
+            setText(label: minTempTempTextLabel, text: "Min Temp: \n" + String(format: "%.2f", weatherData.main.minTemp) + "\u{00B0}")
             setText(label: tempTextLabel, text: "Temp: \n" + String(format: "%.2f", weatherData.main.temp) + "\u{00B0}")
-            setText(label: maxTempTextLabel, text: "Max Temp: \n" + String(format: "%.2f", weatherData.main.temp_max) + "\u{00B0}")
+            setText(label: maxTempTextLabel, text: "Max Temp: \n" + String(format: "%.2f", weatherData.main.maxTemp) + "\u{00B0}")
             setText(label: cloudTextLabel, text: "Cloudiness: \n" + String(weatherData.clouds.all) + "%")
             setText(label: windTextLabel, text: "Wind Speed: \n" + String(weatherData.wind.speed) + " m/s")
             stackView.addArrangedSubview(minTempTempTextLabel)

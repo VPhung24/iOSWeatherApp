@@ -8,12 +8,12 @@
 
 import Foundation
 
-/// struc holding an array of days
+/// Each section is a day
 struct WeatherDataViewModel {
     let theSections: [ViewModelSection]
 }
 
-/// each day
+/// sections have a title of the date and theData is an array of weather data to be passed to rows
 struct ViewModelSection {
     let sectionTitle: String
     let theData: [FiveDayModel.DailyData]

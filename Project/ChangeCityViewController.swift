@@ -18,8 +18,8 @@ class ChangeCityViewController: UIViewController {
     var verticalSpacerConstant: CGFloat = 10
     var horizontalSpacerConstant: CGFloat = 10
     weak var delegate: ChangeCityDelegate?
+    
     init() {
-        // nibName is launching from a nib file or xib file
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -60,7 +60,7 @@ class ChangeCityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         title = myTitle
         
         view.addSubview(changeTextField)

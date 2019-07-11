@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108C22CD69B90079DC08 /* FiveDayModel.swift */; };
 		0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */; };
-		08D1F0D422C5600800477450 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1F0D322C5600800477450 /* WeatherDataModel.swift */; };
 		08D1F0D622C5638300477450 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1F0D522C5638300477450 /* APIManager.swift */; };
 		08D1F0D822C56D9300477450 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1F0D722C56D9300477450 /* Endpoint.swift */; };
 		08DB9B5322C28F9900669E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB9B5222C28F9900669E34 /* AppDelegate.swift */; };
-		08DB9B5522C28F9900669E34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB9B5422C28F9900669E34 /* ViewController.swift */; };
 		08DB9B5A22C28F9A00669E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5922C28F9A00669E34 /* Assets.xcassets */; };
 		08DB9B5D22C28F9A00669E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5B22C28F9A00669E34 /* LaunchScreen.storyboard */; };
 		08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */; };
@@ -25,12 +23,10 @@
 /* Begin PBXFileReference section */
 		0896108C22CD69B90079DC08 /* FiveDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayModel.swift; sourceTree = "<group>"; };
 		0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayViewController.swift; sourceTree = "<group>"; };
-		08D1F0D322C5600800477450 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		08D1F0D522C5638300477450 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		08D1F0D722C56D9300477450 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		08DB9B4F22C28F9900669E34 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DB9B5222C28F9900669E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08DB9B5422C28F9900669E34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08DB9B5922C28F9A00669E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DB9B5C22C28F9A00669E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08DB9B5E22C28F9A00669E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,13 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				08DB9B5222C28F9900669E34 /* AppDelegate.swift */,
-				08DB9B5422C28F9900669E34 /* ViewController.swift */,
 				0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */,
 				08ECE10B22D6B36800D574C6 /* FullViewController.swift */,
 				08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */,
 				08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */,
 				08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */,
-				08D1F0D322C5600800477450 /* WeatherDataModel.swift */,
 				0896108C22CD69B90079DC08 /* FiveDayModel.swift */,
 				08D1F0D522C5638300477450 /* APIManager.swift */,
 				08D1F0D722C56D9300477450 /* Endpoint.swift */,
@@ -161,9 +155,7 @@
 				0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */,
 				08D1F0D622C5638300477450 /* APIManager.swift in Sources */,
 				08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */,
-				08DB9B5522C28F9900669E34 /* ViewController.swift in Sources */,
 				08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */,
-				08D1F0D422C5600800477450 /* WeatherDataModel.swift in Sources */,
 				0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */,
 				08DB9B5322C28F9900669E34 /* AppDelegate.swift in Sources */,
 				08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */,

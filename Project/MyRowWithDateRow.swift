@@ -48,7 +48,7 @@ class MyRowWithDate: UITableViewCell {
         contentView.addSubview(myWeatherText)
         contentView.addSubview(myDateText)
         
-        // leading is hor
+        // constraints
         NSLayoutConstraint.activate([
             myPhoto.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalSpacerConstant),
             myPhoto.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
@@ -69,6 +69,7 @@ class MyRowWithDate: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// set image with height
     func setImage(newImage: UIImage) {
         if let constraint = ratioConstraint {
             myPhoto.removeConstraint(constraint)
@@ -83,6 +84,7 @@ class MyRowWithDate: UITableViewCell {
         myDateText.text = findDateInAMPM(date: date!)
     }
     
+    /// takes in time formatted as "HH:mm:ss" and returns as "h a"
     private func findDateInAMPM(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"

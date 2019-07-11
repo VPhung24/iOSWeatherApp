@@ -12,22 +12,13 @@ class APIManager {
     static let shared = APIManager()
     
     // force using shared instance
+    
     private init() {}
     
     private let apiKey = "99d96ae777f1b21335989a1cc46ab43a"
     private let baseURL = "https://api.openweathermap.org/data/2.5/"
     
     // API calls
-    
-    // @escaping remain in memory even if the compiler has passed this part
-    func getCurrentWeather(forCity city: String, completionHandler: @escaping (WeatherDataModel?, Error?) -> Void) {
-        let parameters: [String: Any] = ["q": city, "appid": apiKey]
-        let urlRequest = networkRequest(baseURL: baseURL, endpoint: WeatherEndpoint.GetWeather, parameters: parameters)
-        networkTask(request: urlRequest) { (response: WeatherDataModel?, error) in
-            completionHandler(response, error)
-            
-        }
-    }
     
     func getFiveDayWeather(forCity city: String, completionHandler: @escaping (FiveDayModel?, Error?) -> Void) {
         let parameters: [String: Any] = ["q": city, "units": "imperial", "appid": apiKey]

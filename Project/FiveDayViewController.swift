@@ -14,7 +14,6 @@ class FiveDayViewController: UIViewController {
     private var images: [String: UIImage] = [:]
     private var sectionModel: WeatherDataViewModel? = nil
     
-    // vp: start with private if you need it elsewhere change. Lazy when everything is complied it wont create the variable until its called for the first time and only once
     private lazy var myTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.delegate = self
@@ -84,7 +83,6 @@ class FiveDayViewController: UIViewController {
                 return
             }
             
-//            print(response)
             self?.data = response // should be of type viewmodel
             
             self?.sectionModel = self?.conformToWeatherViewModel(response: response)
@@ -108,7 +106,7 @@ class FiveDayViewController: UIViewController {
         
         for info in apiReponse.list {
             
-            date = (info.dt_txt).components(separatedBy: " ").first ?? ""
+            date = (info.dateText).components(separatedBy: " ").first ?? ""
             if setOfDates.isEmpty {
                 setOfDates.insert(date)
                 oldDate = date
@@ -157,7 +155,7 @@ class FiveDayViewController: UIViewController {
                     DispatchQueue.main.async {
                         self?.images[imageName] = UIImage(data: data)
                     }
-                }.resume()
+                    }.resume()
             }
         }
         
@@ -168,13 +166,10 @@ class FiveDayViewController: UIViewController {
     
 }
 
-// managing selection, ...
-// not manditory
 extension FiveDayViewController: UITableViewDelegate {
     
 }
 
-// need if table view
 extension FiveDayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyRowWithDate.reuseIdentifier) as! MyRowWithDate
@@ -184,7 +179,7 @@ extension FiveDayViewController: UITableViewDataSource {
             cell.setImage(newImage: image)
         }
         if let text = dailyData?.weather.first?.description {
-            cell.setText(newText: text, date: (dailyData?.dt_txt)?.components(separatedBy: " ").last)
+            cell.setText(newText: text, date: (dailyData?.dateText)?.components(separatedBy: " ").last)
         }
         
         return cell
