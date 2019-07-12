@@ -48,15 +48,7 @@ class ChangeCityViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    var changeTextField: UITextField = {
-        let text = UITextField(frame: .zero)
-        text.translatesAutoresizingMaskIntoConstraints = false
-        text.borderStyle = .roundedRect
-        text.textColor = .black
-        text.backgroundColor = .white
-        text.placeholder = "City Name"
-        return text
-    }()
+    lazy var changeTextField: UITextField = newTextField(myText: "City Name")
     
     override func viewDidLoad() {
         super.viewDidLoad()

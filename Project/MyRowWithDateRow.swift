@@ -10,42 +10,20 @@ import Foundation
 import UIKit
 
 class MyRowWithDate: UITableViewCell {
+    lazy var myDateText: UILabel = nonWrappingLabel(fontSize: 20)
+    lazy var myWeatherText: UILabel = nonWrappingLabel(fontSize: 30)
+    lazy var myPhoto: UIImageView = newImageView()
     private let verticalSpacerConstant: CGFloat = 10
     private let horizontalSpacerConstant: CGFloat = 10
     static let reuseIdentifier = "DateRow"
     private var ratioConstraint: NSLayoutConstraint?
-    
-    lazy var myDateText: UILabel = {
-        let text = UILabel(frame: .zero)
-        text.translatesAutoresizingMaskIntoConstraints = false
-        text.font = UIFont(name:"HelveticaNeue", size: 30.0)
-        text.adjustsFontSizeToFitWidth = true
-        return text
-    }()
-    
-    lazy var myWeatherText: UILabel = {
-        let text = UILabel(frame: .zero)
-        text.translatesAutoresizingMaskIntoConstraints = false
-        text.font = UIFont(name:"HelveticaNeue-Bold", size: 40.0)
-        text.adjustsFontSizeToFitWidth = true
-        return text
-    }()
-    
-    lazy var myPhoto: UIImageView = {
-        let image = UIImageView(frame: .zero)
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        image.isOpaque = false
-        image.clipsToBounds = true
-        return image
-    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         // when you make something static, you need to ref the class
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(myPhoto)
-        contentView.addSubview(myWeatherText)
+//        contentView.addSubview(myWeatherText)
         contentView.addSubview(myDateText)
         
         // constraints
@@ -56,13 +34,14 @@ class MyRowWithDate: UITableViewCell {
             myPhoto.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalSpacerConstant),
             
             myDateText.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalSpacerConstant),
-            myDateText.bottomAnchor.constraint(equalTo: myWeatherText.topAnchor, constant: -verticalSpacerConstant),
+            myDateText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
             myDateText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
             
-            myWeatherText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
-            myWeatherText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
-            myWeatherText.trailingAnchor.constraint(equalTo: myPhoto.leadingAnchor, constant: -horizontalSpacerConstant),
+//            myWeatherText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
+//            myWeatherText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
+//            myWeatherText.trailingAnchor.constraint(equalTo: myPhoto.leadingAnchor, constant: -horizontalSpacerConstant),
             ])
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,7 +58,7 @@ class MyRowWithDate: UITableViewCell {
         ratioConstraint?.isActive = true
     }
     
-    func setText(newText: String?, date: String?) {
+    func setCellText(newText: String?, date: String?) {
         myWeatherText.text = newText
         myDateText.text = findDateInAMPM(date: date!)
     }

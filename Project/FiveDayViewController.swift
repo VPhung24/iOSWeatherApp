@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class FiveDayViewController: UIViewController {
+class FiveDayViewController: BaseViewController {
     private var data: FiveDayModel? = nil
     private var images: [String: UIImage] = [:]
     private var sectionModel: WeatherDataViewModel? = nil
@@ -35,15 +35,9 @@ class FiveDayViewController: UIViewController {
         self.present(navVC, animated: true)
     }
     
-    init() {
-        // nibName is launching from a nib file or xib file
-        super.init(nibName: nil, bundle: nil)
-        title = "5 Day Weather Forecast"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "5 Day Weather Forecast"
         view.addSubview(myTableView)
         
         NSLayoutConstraint.activate([
@@ -64,10 +58,6 @@ class FiveDayViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = myButton
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     func apiRequest(city: String) {
         if let myCity = UserDefaults.standard.string(forKey: "city") {
             print("currently, user default city is " + myCity)
@@ -75,6 +65,7 @@ class FiveDayViewController: UIViewController {
             if myCity != city {
                 UserDefaults.standard.set(city, forKey: "city")
                 print("changed, user default city is " + city)
+                
             }
         }
         APIManager.shared.getFiveDayWeather(forCity: city) { [weak self] (response, error) in
@@ -83,7 +74,7 @@ class FiveDayViewController: UIViewController {
                 return
             }
             
-            self?.data = response // should be of type viewmodel
+            self?.data = response
             
             self?.sectionModel = self?.conformToWeatherViewModel(response: response)
             
@@ -96,8 +87,6 @@ class FiveDayViewController: UIViewController {
     
     func conformToWeatherViewModel(response: FiveDayModel?) -> WeatherDataViewModel? {
         guard let apiReponse = response else { return nil }
-        
-        // for func
         var setOfDates: Set<String> = []
         var array: [FiveDayModel.DailyData] = []
         var sections: [ViewModelSection] = []
@@ -124,15 +113,6 @@ class FiveDayViewController: UIViewController {
         }
         sections.append(ViewModelSection(sectionTitle: myDateFormatter(dayDate: date), theData: array))
         return WeatherDataViewModel(theSections: sections)
-    }
-    
-    /// formats dates like 2019-07-09 to
-    private func myDateFormatter(dayDate: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let theDate = dateFormatter.date(from: dayDate)
-        dateFormatter.dateFormat = "MMM dd, yyy"
-        return dateFormatter.string(from: theDate!)
     }
     
     func downloadImages() {
@@ -179,7 +159,7 @@ extension FiveDayViewController: UITableViewDataSource {
             cell.setImage(newImage: image)
         }
         if let text = dailyData?.weather.first?.description {
-            cell.setText(newText: text, date: (dailyData?.dateText)?.components(separatedBy: " ").last)
+            cell.setCellText(newText: text, date: (dailyData?.dateText)?.components(separatedBy: " ").last)
         }
         
         return cell
@@ -207,17 +187,10 @@ extension FiveDayViewController: UITableViewDataSource {
             fullVC.row = data
         }
         if let cell = tableView.cellForRow(at: indexPath) as? MyRowWithDate {
-            if let photo: UIImageView = cell.myPhoto {
-                fullVC.image = photo.image
-            }
-            if let time: UILabel = cell.myDateText {
-                fullVC.time = time.text
-            }
-            if let weather: UILabel = cell.myWeatherText {
-                fullVC.weather = weather.text
-            }
+            fullVC.image = cell.myPhoto.image
+            fullVC.time = cell.myDateText.text
+            fullVC.weather = cell.myWeatherText.text
         }
-        
         fullVC.myDate = sectionModel?.theSections[indexPath.section].sectionTitle
         self.navigationController?.pushViewController(fullVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -226,7 +199,6 @@ extension FiveDayViewController: UITableViewDataSource {
 
 extension FiveDayViewController: ChangeCityDelegate {
     func changeCity(city: String) {
-        print(city)
         apiRequest(city: city)
     }
 }

@@ -18,6 +18,7 @@
 		08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */; };
 		08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10B22D6B36800D574C6 /* FullViewController.swift */; };
 		08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */; };
+		08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE11322D8591B00D574C6 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRowWithDateRow.swift; sourceTree = "<group>"; };
 		08ECE10B22D6B36800D574C6 /* FullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewController.swift; sourceTree = "<group>"; };
 		08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
+		08ECE11322D8591B00D574C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				08DB9B5222C28F9900669E34 /* AppDelegate.swift */,
 				0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */,
 				08ECE10B22D6B36800D574C6 /* FullViewController.swift */,
+				08ECE11322D8591B00D574C6 /* BaseViewController.swift */,
 				08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */,
 				08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */,
 				08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */,
@@ -157,6 +160,7 @@
 				08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */,
 				08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */,
 				0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */,
+				08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */,
 				08DB9B5322C28F9900669E34 /* AppDelegate.swift in Sources */,
 				08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */,
 				08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */,
