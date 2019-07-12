@@ -23,7 +23,7 @@ class MyRowWithDate: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(myPhoto)
-//        contentView.addSubview(myWeatherText)
+        contentView.addSubview(myWeatherText)
         contentView.addSubview(myDateText)
         
         // constraints
@@ -34,12 +34,12 @@ class MyRowWithDate: UITableViewCell {
             myPhoto.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalSpacerConstant),
             
             myDateText.topAnchor.constraint(equalTo: contentView.topAnchor, constant: verticalSpacerConstant),
-            myDateText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
+            myDateText.bottomAnchor.constraint(equalTo: myWeatherText.topAnchor, constant: -verticalSpacerConstant),
             myDateText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
             
-//            myWeatherText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
-//            myWeatherText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
-//            myWeatherText.trailingAnchor.constraint(equalTo: myPhoto.leadingAnchor, constant: -horizontalSpacerConstant),
+            myWeatherText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -verticalSpacerConstant),
+            myWeatherText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalSpacerConstant),
+            myWeatherText.trailingAnchor.constraint(equalTo: myPhoto.leadingAnchor, constant: -horizontalSpacerConstant),
             ])
         
     }
