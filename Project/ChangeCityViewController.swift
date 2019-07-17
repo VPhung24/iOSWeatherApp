@@ -13,19 +13,11 @@ protocol ChangeCityDelegate: class {
     func changeCity(city: String)
 }
 
-class ChangeCityViewController: UIViewController {
+class ChangeCityViewController: BaseViewController {
     var myTitle: String = "Change the city"
     var verticalSpacerConstant: CGFloat = 10
     var horizontalSpacerConstant: CGFloat = 10
     weak var delegate: ChangeCityDelegate?
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     var submitButton: UIButton = {
         var button: UIButton = UIButton()
@@ -48,7 +40,7 @@ class ChangeCityViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    lazy var changeTextField: UITextField = newTextField(myText: "City Name")
+    lazy var changeTextField: UITextField = .newTextField(myText: "City Name")
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class MyRowWithDate: UITableViewCell {
-    lazy var myDateText: UILabel = nonWrappingLabel(fontSize: 20)
-    lazy var myWeatherText: UILabel = nonWrappingLabel(fontSize: 30)
-    lazy var myPhoto: UIImageView = newImageView()
+    lazy var myDateText: UILabel = .nonWrappingLabel(fontSize: 20)
+    lazy var myWeatherText: UILabel = .nonWrappingLabel(fontSize: 30)
+    lazy var myPhoto: UIImageView = .newImageView()
     private let verticalSpacerConstant: CGFloat = 10
     private let horizontalSpacerConstant: CGFloat = 10
     static let reuseIdentifier = "DateRow"

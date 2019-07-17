@@ -14,11 +14,13 @@
 		08DB9B5322C28F9900669E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DB9B5222C28F9900669E34 /* AppDelegate.swift */; };
 		08DB9B5A22C28F9A00669E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5922C28F9A00669E34 /* Assets.xcassets */; };
 		08DB9B5D22C28F9A00669E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5B22C28F9A00669E34 /* LaunchScreen.storyboard */; };
+		08E615A922DEE5940080D46E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E615A822DEE5940080D46E /* Helper.swift */; };
 		08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */; };
 		08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */; };
 		08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10B22D6B36800D574C6 /* FullViewController.swift */; };
 		08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */; };
 		08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE11322D8591B00D574C6 /* BaseViewController.swift */; };
+		08ECE11622D8F98B00D574C6 /* configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE11522D8F98B00D574C6 /* configure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +33,13 @@
 		08DB9B5922C28F9A00669E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DB9B5C22C28F9A00669E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08DB9B5E22C28F9A00669E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08E615A822DEE5940080D46E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataViewModel.swift; sourceTree = "<group>"; };
 		08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRowWithDateRow.swift; sourceTree = "<group>"; };
 		08ECE10B22D6B36800D574C6 /* FullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewController.swift; sourceTree = "<group>"; };
 		08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		08ECE11322D8591B00D574C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		08ECE11522D8F98B00D574C6 /* configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				08DB9B5222C28F9900669E34 /* AppDelegate.swift */,
 				0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */,
 				08ECE10B22D6B36800D574C6 /* FullViewController.swift */,
+				08E615A822DEE5940080D46E /* Helper.swift */,
 				08ECE11322D8591B00D574C6 /* BaseViewController.swift */,
 				08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */,
 				08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */,
@@ -78,6 +83,7 @@
 				0896108C22CD69B90079DC08 /* FiveDayModel.swift */,
 				08D1F0D522C5638300477450 /* APIManager.swift */,
 				08D1F0D722C56D9300477450 /* Endpoint.swift */,
+				08ECE11522D8F98B00D574C6 /* configure.swift */,
 				08DB9B5922C28F9A00669E34 /* Assets.xcassets */,
 				08DB9B5B22C28F9A00669E34 /* LaunchScreen.storyboard */,
 				08DB9B5E22C28F9A00669E34 /* Info.plist */,
@@ -158,6 +164,7 @@
 				0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */,
 				08D1F0D622C5638300477450 /* APIManager.swift in Sources */,
 				08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */,
+				08ECE11622D8F98B00D574C6 /* configure.swift in Sources */,
 				08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */,
 				0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */,
 				08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */,
@@ -165,6 +172,7 @@
 				08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */,
 				08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */,
 				08D1F0D822C56D9300477450 /* Endpoint.swift in Sources */,
+				08E615A922DEE5940080D46E /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
 				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SAQ42S589;
 				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-class FullViewController: BaseViewController {
-    lazy var dateTextLabel: UILabel = nonWrappingLabel(fontSize: 20)
-    lazy var hourTextLabel: UILabel = nonWrappingLabel(fontSize: 50)
-    lazy var weatherTextLabel: UILabel = nonWrappingLabel(fontSize: 55)
-    lazy var maxTempTextLabel: UILabel = wrappingLabel(fontSize: 20)
-    lazy var tempTextLabel: UILabel = wrappingLabel(fontSize: 20)
-    lazy var minTempTempTextLabel: UILabel = wrappingLabel(fontSize: 20)
-    lazy var cloudTextLabel: UILabel = wrappingLabel(fontSize: 20)
-    lazy var windTextLabel: UILabel = wrappingLabel(fontSize: 20)
-    lazy var stackView: UIStackView = newStackView(axis: .horizontal)
-    lazy var cloudAndWindStackView: UIStackView = newStackView(axis: .horizontal)
-    lazy var allStackView: UIStackView = newStackView(axis: .vertical)
-    lazy var fullImageView: UIImageView = newImageView()
+class FullViewController: UIViewController {
+    lazy var dateTextLabel: UILabel = .nonWrappingLabel(fontSize: 20)
+    lazy var hourTextLabel: UILabel = .nonWrappingLabel(fontSize: 50)
+    lazy var weatherTextLabel: UILabel = .nonWrappingLabel(fontSize: 55)
+    lazy var maxTempTextLabel: UILabel = .wrappingLabel(fontSize: 20)
+    lazy var tempTextLabel: UILabel = .wrappingLabel(fontSize: 20)
+    lazy var minTempTempTextLabel: UILabel = .wrappingLabel(fontSize: 20)
+    lazy var cloudTextLabel: UILabel = .wrappingLabel(fontSize: 20)
+    lazy var windTextLabel: UILabel = .wrappingLabel(fontSize: 20)
+    lazy var stackView: UIStackView = .newStackView(axis: .horizontal)
+    lazy var cloudAndWindStackView: UIStackView = .newStackView(axis: .horizontal)
+    lazy var allStackView: UIStackView = .newStackView(axis: .vertical)
+    lazy var fullImageView: UIImageView = .newImageView()
     
     var image: UIImage? = nil
     var time: String? = nil
@@ -87,6 +87,19 @@ class FullViewController: BaseViewController {
             allStackView.addArrangedSubview(stackView)
             allStackView.addArrangedSubview(cloudAndWindStackView)
         }
+    }
+    
+    func setText(label: UILabel, text: String) {
+        label.text = text
+    }
+    
+    func setImage(myView: UIImageView, image: UIImage) {
+        if let constraint = ratioConstraint {
+            myView.removeConstraint(constraint)
+        }
+        myView.image = image
+        ratioConstraint = myView.heightAnchor.constraint(equalTo: myView.widthAnchor, multiplier: image.size.height / image.size.width)
+        ratioConstraint?.isActive = true
     }
 }
 

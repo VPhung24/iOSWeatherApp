@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class FiveDayViewController: BaseViewController {
+class FiveDayViewController: UIViewController {
     private var data: FiveDayModel? = nil
     private var images: [String: UIImage] = [:]
     private var sectionModel: WeatherDataViewModel? = nil
@@ -37,7 +37,6 @@ class FiveDayViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "5 Day Weather Forecast"
         view.addSubview(myTableView)
         
         NSLayoutConstraint.activate([
@@ -50,9 +49,12 @@ class FiveDayViewController: BaseViewController {
         if let city = UserDefaults.standard.string(forKey: "city") {
             apiRequest(city: city)
             print("default city is \(city)")
+            title = "\(city) 5 Day Forecast"
         } else {
+            UserDefaults.standard.set("San Francisco", forKey: "city")
             apiRequest(city: "San Francisco")
             print("city is SF")
+            title = "San Francisco 5 Day Forecast"
         }
         
         self.navigationItem.leftBarButtonItem = myButton
@@ -65,7 +67,7 @@ class FiveDayViewController: BaseViewController {
             if myCity != city {
                 UserDefaults.standard.set(city, forKey: "city")
                 print("changed, user default city is " + city)
-                
+                title = "\(city) 5 Day Forecast"
             }
         }
         APIManager.shared.getFiveDayWeather(forCity: city) { [weak self] (response, error) in
@@ -144,6 +146,14 @@ class FiveDayViewController: BaseViewController {
         }
     }
     
+    /// formats dates like 2019-07-09 to
+    func myDateFormatter(dayDate: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let theDate = dateFormatter.date(from: dayDate)
+        dateFormatter.dateFormat = "MMM dd, yyy"
+        return dateFormatter.string(from: theDate!)
+    }
 }
 
 extension FiveDayViewController: UITableViewDelegate {
