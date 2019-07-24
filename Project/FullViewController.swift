@@ -1,6 +1,6 @@
 //
 //  FullViewController.swift
-//  Project
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 7/10/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.
@@ -18,8 +18,8 @@ class FullViewController: UIViewController {
     lazy var minTempTempTextLabel: UILabel = .wrappingLabel(fontSize: 20)
     lazy var cloudTextLabel: UILabel = .wrappingLabel(fontSize: 20)
     lazy var windTextLabel: UILabel = .wrappingLabel(fontSize: 20)
-    lazy var stackView: UIStackView = .newStackView(axis: .horizontal)
-    lazy var cloudAndWindStackView: UIStackView = .newStackView(axis: .horizontal)
+    lazy var stackView: UIStackView = .newStackView()
+    lazy var cloudAndWindStackView: UIStackView = .newStackView()
     lazy var allStackView: UIStackView = .newStackView(axis: .vertical)
     lazy var fullImageView: UIImageView = .newImageView()
     

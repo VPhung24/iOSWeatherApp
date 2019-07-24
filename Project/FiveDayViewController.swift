@@ -1,6 +1,6 @@
 //
 //  FiveDayViewController.swift
-//  Project
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 7/3/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.
@@ -29,7 +29,7 @@ class FiveDayViewController: UIViewController {
     }()
     
     @objc func changethisCity() {
-        let changeVC = ChangeCityViewController()
+        let changeVC = SelectLocationTableViewController()
         changeVC.delegate = self
         let navVC = UINavigationController(rootViewController: changeVC)
         self.present(navVC, animated: true)
@@ -61,15 +61,6 @@ class FiveDayViewController: UIViewController {
     }
     
     func apiRequest(city: String) {
-        if let myCity = UserDefaults.standard.string(forKey: "city") {
-            print("currently, user default city is " + myCity)
-            
-            if myCity != city {
-                UserDefaults.standard.set(city, forKey: "city")
-                print("changed, user default city is " + city)
-                title = "\(city) 5 Day Forecast"
-            }
-        }
         APIManager.shared.getFiveDayWeather(forCity: city) { [weak self] (response, error) in
             guard error == nil, let response = response else {
                 print("apiRequest error: ", error)
@@ -80,8 +71,18 @@ class FiveDayViewController: UIViewController {
             
             self?.sectionModel = self?.conformToWeatherViewModel(response: response)
             
+            if let myCity = UserDefaults.standard.string(forKey: "city") {
+                print("currently, user default city is " + myCity)
+                
+                if myCity != city {
+                    UserDefaults.standard.set(city, forKey: "city")
+                    print("changed, user default city is " + city)
+                    self?.title = "\(city) 5 Day Forecast"
+                }
+            }
             DispatchQueue.main.async {
                 self?.myTableView.reloadData()
+                self?.title = UserDefaults.standard.string(forKey: "city") ?? "SF"
             }
             self?.downloadImages()
         }
@@ -168,8 +169,8 @@ extension FiveDayViewController: UITableViewDataSource {
         if let iconName = dailyData?.weather.first?.icon, let image = images[iconName] {
             cell.setImage(newImage: image)
         }
-        if let text = dailyData?.weather.first?.description {
-            cell.setCellText(newText: text, date: (dailyData?.dateText)?.components(separatedBy: " ").last)
+        if let text = dailyData?.weather.first?.description, let temp = dailyData?.main.temp, let theTime = (dailyData?.dateText)?.components(separatedBy: " ").last {
+            cell.setCellText(newText: text, date: theTime, theTemp: String(temp))
         }
         
         return cell
@@ -198,7 +199,7 @@ extension FiveDayViewController: UITableViewDataSource {
         }
         if let cell = tableView.cellForRow(at: indexPath) as? MyRowWithDate {
             fullVC.image = cell.myPhoto.image
-            fullVC.time = cell.myDateText.text
+            fullVC.time = cell.myHourText.text
             fullVC.weather = cell.myWeatherText.text
         }
         fullVC.myDate = sectionModel?.theSections[indexPath.section].sectionTitle
@@ -207,7 +208,7 @@ extension FiveDayViewController: UITableViewDataSource {
     }
 }
 
-extension FiveDayViewController: ChangeCityDelegate {
+extension FiveDayViewController: SelectLocationTableViewControllerDelegate {
     func changeCity(city: String) {
         apiRequest(city: city)
     }

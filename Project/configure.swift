@@ -1,6 +1,6 @@
 //
 //  configure.swift
-//  Project
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 7/12/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  APIManager.swift
-//  Project
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 6/27/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.
@@ -18,6 +18,8 @@ class APIManager {
     private let apiKey = "99d96ae777f1b21335989a1cc46ab43a"
     private let baseURL = "https://api.openweathermap.org/data/2.5/"
     
+    private let googleURL = "https://maps.googleapis.com/maps/api/"
+    private let googleKey = "AIzaSyAxA7yscwR-OWIV-n2A2OMJGYK3D2J4SI0"
     // API calls
     
     func getFiveDayWeather(forCity city: String, completionHandler: @escaping (FiveDayModel?, Error?) -> Void) {
@@ -26,6 +28,14 @@ class APIManager {
         networkTask(request: urlRequest) { (response: FiveDayModel?, error) in
             completionHandler(response, error)
             
+        }
+    }
+    
+    func googleAuto(forString input: String, completionHandler: @escaping (GoogleLocationModel?, Error?) -> Void) {
+        let parameters: [String: Any] = ["input": input, "types": "(cities)", "key": googleKey]
+        let urlRequest = networkRequest(baseURL: googleURL, endpoint: WeatherEndpoint.GoogleLocation, parameters: parameters)
+        networkTask(request: urlRequest) { (response: GoogleLocationModel?, error) in
+            completionHandler(response, error)
         }
     }
     

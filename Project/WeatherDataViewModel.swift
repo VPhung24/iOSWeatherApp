@@ -1,6 +1,6 @@
 //
 //  WeatherDataViewModel.swift
-//  Project
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 7/9/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.

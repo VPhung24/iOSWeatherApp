@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085BD7A522E8D3BA00AF2992 /* SelectLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */; };
 		0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108C22CD69B90079DC08 /* FiveDayModel.swift */; };
 		0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */; };
 		08D1F0D622C5638300477450 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1F0D522C5638300477450 /* APIManager.swift */; };
@@ -15,30 +16,31 @@
 		08DB9B5A22C28F9A00669E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5922C28F9A00669E34 /* Assets.xcassets */; };
 		08DB9B5D22C28F9A00669E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08DB9B5B22C28F9A00669E34 /* LaunchScreen.storyboard */; };
 		08E615A922DEE5940080D46E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E615A822DEE5940080D46E /* Helper.swift */; };
+		08E615CB22E10E790080D46E /* GoogleLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E615CA22E10E790080D46E /* GoogleLocationModel.swift */; };
 		08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */; };
 		08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */; };
 		08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10B22D6B36800D574C6 /* FullViewController.swift */; };
 		08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */; };
-		08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE11322D8591B00D574C6 /* BaseViewController.swift */; };
 		08ECE11622D8F98B00D574C6 /* configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECE11522D8F98B00D574C6 /* configure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationTableViewController.swift; sourceTree = "<group>"; };
 		0896108C22CD69B90079DC08 /* FiveDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayModel.swift; sourceTree = "<group>"; };
 		0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayViewController.swift; sourceTree = "<group>"; };
 		08D1F0D522C5638300477450 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		08D1F0D722C56D9300477450 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		08DB9B4F22C28F9900669E34 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08DB9B4F22C28F9900669E34 /* iOSWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DB9B5222C28F9900669E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08DB9B5922C28F9A00669E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08DB9B5C22C28F9A00669E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08DB9B5E22C28F9A00669E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08E615A822DEE5940080D46E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		08E615CA22E10E790080D46E /* GoogleLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLocationModel.swift; sourceTree = "<group>"; };
 		08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataViewModel.swift; sourceTree = "<group>"; };
 		08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRowWithDateRow.swift; sourceTree = "<group>"; };
 		08ECE10B22D6B36800D574C6 /* FullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewController.swift; sourceTree = "<group>"; };
 		08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
-		08ECE11322D8591B00D574C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		08ECE11522D8F98B00D574C6 /* configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +66,7 @@
 		08DB9B5022C28F9900669E34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08DB9B4F22C28F9900669E34 /* Project.app */,
+				08DB9B4F22C28F9900669E34 /* iOSWeatherApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,12 +78,13 @@
 				0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */,
 				08ECE10B22D6B36800D574C6 /* FullViewController.swift */,
 				08E615A822DEE5940080D46E /* Helper.swift */,
-				08ECE11322D8591B00D574C6 /* BaseViewController.swift */,
 				08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */,
 				08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */,
-				08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */,
-				0896108C22CD69B90079DC08 /* FiveDayModel.swift */,
+				085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */,
 				08D1F0D522C5638300477450 /* APIManager.swift */,
+				08E615CA22E10E790080D46E /* GoogleLocationModel.swift */,
+				0896108C22CD69B90079DC08 /* FiveDayModel.swift */,
+				08ECE10722D542EB00D574C6 /* WeatherDataViewModel.swift */,
 				08D1F0D722C56D9300477450 /* Endpoint.swift */,
 				08ECE11522D8F98B00D574C6 /* configure.swift */,
 				08DB9B5922C28F9A00669E34 /* Assets.xcassets */,
@@ -94,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08DB9B4E22C28F9900669E34 /* Project */ = {
+		08DB9B4E22C28F9900669E34 /* iOSWeatherApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08DB9B6122C28F9A00669E34 /* Build configuration list for PBXNativeTarget "Project" */;
+			buildConfigurationList = 08DB9B6122C28F9A00669E34 /* Build configuration list for PBXNativeTarget "iOSWeatherApp" */;
 			buildPhases = (
 				08DB9B4B22C28F9900669E34 /* Sources */,
 				08DB9B4C22C28F9900669E34 /* Frameworks */,
@@ -106,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = Project;
+			name = iOSWeatherApp;
 			productName = Project;
-			productReference = 08DB9B4F22C28F9900669E34 /* Project.app */;
+			productReference = 08DB9B4F22C28F9900669E34 /* iOSWeatherApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08DB9B4A22C28F9900669E34 /* Build configuration list for PBXProject "Project" */;
+			buildConfigurationList = 08DB9B4A22C28F9900669E34 /* Build configuration list for PBXProject "iOSWeatherApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08DB9B4E22C28F9900669E34 /* Project */,
+				08DB9B4E22C28F9900669E34 /* iOSWeatherApp */,
 			);
 		};
 /* End PBXProject section */
@@ -167,9 +170,10 @@
 				08ECE11622D8F98B00D574C6 /* configure.swift in Sources */,
 				08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */,
 				0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */,
-				08ECE11422D8591B00D574C6 /* BaseViewController.swift in Sources */,
 				08DB9B5322C28F9900669E34 /* AppDelegate.swift in Sources */,
 				08ECE11022D7CDE300D574C6 /* ChangeCityViewController.swift in Sources */,
+				08E615CB22E10E790080D46E /* GoogleLocationModel.swift in Sources */,
+				085BD7A522E8D3BA00AF2992 /* SelectLocationTableViewController.swift in Sources */,
 				08ECE10C22D6B36800D574C6 /* FullViewController.swift in Sources */,
 				08D1F0D822C56D9300477450 /* Endpoint.swift in Sources */,
 				08E615A922DEE5940080D46E /* Helper.swift in Sources */,
@@ -345,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08DB9B4A22C28F9900669E34 /* Build configuration list for PBXProject "Project" */ = {
+		08DB9B4A22C28F9900669E34 /* Build configuration list for PBXProject "iOSWeatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08DB9B5F22C28F9A00669E34 /* Debug */,
@@ -354,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08DB9B6122C28F9A00669E34 /* Build configuration list for PBXNativeTarget "Project" */ = {
+		08DB9B6122C28F9A00669E34 /* Build configuration list for PBXNativeTarget "iOSWeatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08DB9B6222C28F9A00669E34 /* Debug */,

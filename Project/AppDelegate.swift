@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Understanding
+//  iOSWeatherApp
 //
 //  Created by Vivian Phung on 6/13/19.
 //  Copyright © 2019 Vivian Phung. All rights reserved.
@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // vp: this is setting the frame of it to size of the screen
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: FiveDayViewController())
-        // makes view controller the main view con and visable
         window?.makeKeyAndVisible()
         return true
     }
