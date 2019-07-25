@@ -29,14 +29,13 @@ class SelectLocationTableViewController: UITableViewController, UISearchBarDeleg
     private let searchBar: UISearchBar = {
         let search = UISearchBar(frame: .zero)
         search.sizeToFit()
-//        search.obscuresBackgroundDuringPresentation = false
         return search
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "X", style: .plain, target: self, action: #selector(exit))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(exit))
         tableView.register(MyLocationCell.self, forCellReuseIdentifier: MyLocationCell.reuseIdentifier)
         tableView.tableHeaderView = searchBar
 //        tableView.tableFooterView = spinner

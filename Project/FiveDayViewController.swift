@@ -13,6 +13,7 @@ class FiveDayViewController: UIViewController {
     private var data: FiveDayModel? = nil
     private var images: [String: UIImage] = [:]
     private var sectionModel: WeatherDataViewModel? = nil
+    private var newTitle: String? = nil
     
     private lazy var myTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -64,6 +65,14 @@ class FiveDayViewController: UIViewController {
         APIManager.shared.getFiveDayWeather(forCity: city) { [weak self] (response, error) in
             guard error == nil, let response = response else {
                 print("apiRequest error: ", error)
+                let alert = UIAlertController(title: "Error", message: "Weather could not be found", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel action"), style: .destructive, handler: { _ in
+                    print("canceled")
+                }))
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Retry", comment: "Retry action"), style: .default, handler: { _ in
+                    self?.changethisCity()
+                }))
+                self?.present(alert, animated: true, completion: nil)
                 return
             }
             
@@ -77,12 +86,12 @@ class FiveDayViewController: UIViewController {
                 if myCity != city {
                     UserDefaults.standard.set(city, forKey: "city")
                     print("changed, user default city is " + city)
-                    self?.title = "\(city) 5 Day Forecast"
+                    self?.newTitle = "\(city) 5 Day Forecast"
                 }
             }
             DispatchQueue.main.async {
                 self?.myTableView.reloadData()
-                self?.title = UserDefaults.standard.string(forKey: "city") ?? "SF"
+                self?.title = self?.newTitle ?? "San Francisco 5 Day Forecast"
             }
             self?.downloadImages()
         }
