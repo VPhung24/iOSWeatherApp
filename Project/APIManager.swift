@@ -15,15 +15,13 @@ class APIManager {
     
     private init() {}
     
-    private let apiKey = "99d96ae777f1b21335989a1cc46ab43a"
     private let baseURL = "https://api.openweathermap.org/data/2.5/"
     
     private let googleURL = "https://maps.googleapis.com/maps/api/"
-    private let googleKey = "AIzaSyAxA7yscwR-OWIV-n2A2OMJGYK3D2J4SI0"
     // API calls
     
     func getFiveDayWeather(forCity city: String, completionHandler: @escaping (FiveDayModel?, Error?) -> Void) {
-        let parameters: [String: Any] = ["q": city, "units": "imperial", "appid": apiKey]
+        let parameters: [String: Any] = ["q": city, "units": "imperial", "appid": APIKeys.Weather]
         let urlRequest = networkRequest(baseURL: baseURL, endpoint: WeatherEndpoint.GetFiveDayWeather, parameters: parameters)
         networkTask(request: urlRequest) { (response: FiveDayModel?, error) in
             completionHandler(response, error)
@@ -32,7 +30,7 @@ class APIManager {
     }
     
     func googleAuto(forString input: String, completionHandler: @escaping (GoogleLocationModel?, Error?) -> Void) {
-        let parameters: [String: Any] = ["input": input, "types": "(cities)", "key": googleKey]
+        let parameters: [String: Any] = ["input": input, "types": "(cities)", "key": APIKeys.GoogleLocationAuto]
         let urlRequest = networkRequest(baseURL: googleURL, endpoint: WeatherEndpoint.GoogleLocation, parameters: parameters)
         networkTask(request: urlRequest) { (response: GoogleLocationModel?, error) in
             completionHandler(response, error)

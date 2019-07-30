@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		085BD7A522E8D3BA00AF2992 /* SelectLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */; };
+		0883657322F0E0D2007A861A /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883657222F0E0D2007A861A /* APIKeys.swift */; };
 		0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108C22CD69B90079DC08 /* FiveDayModel.swift */; };
 		0896108F22CD6BFA0079DC08 /* FiveDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */; };
 		08D1F0D622C5638300477450 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1F0D522C5638300477450 /* APIManager.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationTableViewController.swift; sourceTree = "<group>"; };
+		0883657222F0E0D2007A861A /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0896108C22CD69B90079DC08 /* FiveDayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayModel.swift; sourceTree = "<group>"; };
 		0896108E22CD6BFA0079DC08 /* FiveDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayViewController.swift; sourceTree = "<group>"; };
 		08D1F0D522C5638300477450 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				08ECE10922D5431700D574C6 /* MyRowWithDateRow.swift */,
 				08ECE10F22D7CDE300D574C6 /* ChangeCityViewController.swift */,
 				085BD7A422E8D3BA00AF2992 /* SelectLocationTableViewController.swift */,
+				0883657222F0E0D2007A861A /* APIKeys.swift */,
 				08D1F0D522C5638300477450 /* APIManager.swift */,
 				08E615CA22E10E790080D46E /* GoogleLocationModel.swift */,
 				0896108C22CD69B90079DC08 /* FiveDayModel.swift */,
@@ -166,6 +169,7 @@
 			files = (
 				0896108D22CD69B90079DC08 /* FiveDayModel.swift in Sources */,
 				08D1F0D622C5638300477450 /* APIManager.swift in Sources */,
+				0883657322F0E0D2007A861A /* APIKeys.swift in Sources */,
 				08ECE10A22D5431700D574C6 /* MyRowWithDateRow.swift in Sources */,
 				08ECE11622D8F98B00D574C6 /* configure.swift in Sources */,
 				08ECE10822D542EB00D574C6 /* WeatherDataViewModel.swift in Sources */,
